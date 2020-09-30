@@ -1,0 +1,9 @@
+# BlogStorm
+
+Blog feito como forma de estudo feito com backend inteiramente em NODE.JS
+
+FRAMEWORKS UTILIZADOS: EXPRESS.JS, NODE.JS, SEQUELIZE.JS, SLUGIFY, BODY-PARSER, NODEMAILER
+
+BANCO DE DADOS: MYSQL COM SEQUELIZE.JS
+
+FRONT: HTML E CSS PURO
