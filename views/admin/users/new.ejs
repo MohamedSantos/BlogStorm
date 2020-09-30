@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta charset="viewport" content="width- device-width, inital-scale= 1.0">
+
+    <title>Storm - ADM</title>
+
+    <link rel="shortcut icon" href="/css/images/favicon.ico" >
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="/css/register.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+
+<body class="maxhidth center">
+    <div class="clearfix">
+        <form method="POST" action="/users/save" class="login-form">
+            <h1>Criar Usuário</h1>
+            <div class="textb">
+                <input name="email" type="text" required>
+                <div class="placeholder">
+                    E-mail
+                </div>
+            </div>
+            <br>
+            <div class="textb">
+                <input name="password" type="password" required>
+                <div class="placeholder">
+                    Senha
+                </div>
+            </div>
+            <br>
+            <input type="submit" class="btn" value="Criar usuário">
+        </form>
+        <button class="btn" style="background-color: #292685; width: 100px; font-size: 15px;" onclick="goBack()">Voltar</button>
+    </div>
+     
+
+<script>
+    function goBack(){
+        window.history.back()
+    }
+</script> 
+</body>
+
+</html>

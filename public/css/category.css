@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.category-section{
+    background-color: white;
+    background-size: cover;
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+.category-section h1{
+    text-align: center;
+    color: black;
+}
+
+.border{
+    width: 100px;
+    height: 10px;
+    background: black;
+    margin: 40px auto;
+}
+
+
+.atu-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #4976a3;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.curi-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #32ce47;
+    color: #fff;
+    padding: 10px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.edu-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #e25b26;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.espor-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #e63a3a;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sau-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #2957d3;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.tech-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #8d8d8d;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.fem-btn{
+    display: flex;
+    margin: 50px auto;
+    
+    border: 0;
+    background: #d64fd6;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.geek-btn{
+    display: flex;
+    margin: 50px auto;
+    width: 13,5%;
+    border: 0;
+    background: #163e66;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.atu-btn:hover{
+    background: #268ed3;
+}
+
+.curi-btn:hover{
+    background: #32df49;
+}
+
+.edu-btn:hover{
+    background: #f56025;
+}
+
+.espor-btn:hover{
+    background: #fc3333;
+}
+
+.sau-btn:hover{
+    background: #1a9df5;
+}
+
+.tech-btn:hover{
+    background: #ada7a7;
+}
+
+.fem-btn:hover{
+    background: #c43cc4;
+}
+
+.geek-btn:hover{
+    background: #21609e;
+}

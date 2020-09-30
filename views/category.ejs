@@ -1,0 +1,116 @@
+<%- include('partials/header.ejs')%>
+    <div class="maxhidth center">
+        <div class="title-posts">
+        <% if (categories.title == "Mundo Geek"){%>
+            <h1 class="h1-title line line-geek">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Tecnologia"){%>
+            <h1 class="h1-title line line-tec">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Curiosidades"){%>
+            <h1 class="h1-title line line-curi">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Saúde"){%>
+            <h1 class="h1-title line line-sau">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Atualidades"){%>
+            <h1 class="h1-title line line-atua">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Mundo Feminino"){%>
+            <h1 class="h1-title line line-fem">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Esportes"){%>
+            <h1 class="h1-title line line-sport">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        <% if (categories.title == "Educação"){%>
+            <h1 class="h1-title line line-edu">
+                <%= categories.title%>
+            </h1>
+        <%}%>
+        </div>
+        <div id="containerPosts">
+            <% articles.forEach(article=>{%>
+                <div class="each-post">
+                
+                    <!-- IMAGEM -->
+                    <a href="/<%=article.slug%>"><img loading="lazy" alt="<%=article.title%>" src="/uploads/<%=article.img%>" id="image"></a>
+                            
+                    <!-- CATEGORIA -->
+    
+                    <%if(categories.title == "Atualidades"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #18f848">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <%if(categories.title == "Curiosidades"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #fd9800">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <%if(categories.title == "Educação"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #048af7">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <%if(categories.title == "Esportes"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #7d05ec">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <% if(categories.title == "Saúde"){%>
+                    <a href="/category/<%= categories.slug%>" id="category" style="color: #ee0b0b">
+                        <strong> <%= categories.title %> </strong>
+                    </a>
+                    <%}%>
+    
+                    <%if(categories.title == "Tecnologia"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #135502">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+                    
+                    <%if(categories.title == "Mundo Geek"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #2610ec">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <%if(categories.title == "Mundo Feminino"){%>
+                        <a href="/category/<%= categories.slug%>" id="category" style="color: #df14b3">
+                            <strong> <%= categories.title %> </strong>
+                        </a>
+                    <%}%>
+    
+                    <!-- TITULO -->
+                    <a href="/<%=article.slug%>" id="color-red-dark">
+                        <h2 style="font-weight: 700;margin-top:10px;">
+                        <%= article.title %>
+                        </h2>
+                        <!-- SUBTITULO -->
+                        <div id="sub">
+                        <%= article.subtitle %>
+                        </div>
+                    </a>
+                </div>
+                <%})%>
+        </div>        
+    </div>
+<%- include('partials/footer.ejs')%>

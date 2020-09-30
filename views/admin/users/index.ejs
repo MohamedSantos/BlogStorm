@@ -1,0 +1,47 @@
+<%- include ('../../partials/headerAdm.ejs')%>
+
+<div class="container">
+    <br>
+    <h2>Usuários</h2>
+    <br>
+    <a href="/admin/users/new"><button class="btn btn-new">Criar novo usuário</button></a>
+    <hr>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+           <% users.forEach(user => {%>
+            <tr>
+                <th><%= user.id%></th> 
+                <th><%= user.email%></th> 
+                <th>                   
+                    <form method="POST" action="/users/delete" style="display:inline;" onsubmit="confDelete(event, this)">
+                        <input type="hidden" name="id" value="<%= user.id%>">
+                        <button class="btn btn-delete">Excluir</button>
+                    </form>
+                    <a href="/admin/users/edit/<%= user.id%>"><button class="btn btn-edit">Editar</button></a>
+
+                    
+                </th>
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+
+<%- include ('../../partials/footer.ejs')%>
+<script>
+    function confDelete(event, form){
+        event.preventDefault();
+        var decision= confirm("Você realmente quer deletar este artigo?")
+        if(decision == true){
+            form.submit();
+        }
+    }
+</script>

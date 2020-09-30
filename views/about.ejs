@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta charset="viewport" content="width- device-width, inital-scale= 1.0">
+    <meta name="description" content="Saiba mais sobre nós">
+
+    <title>Sobre nós - STORM</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177365414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177365414-1');
+</script>
+
+    <link rel="shortcut icon" href="/css/images/favicon.ico" >
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/share.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body class="center">
+      
+  <div class="header">
+    <a href="/"><img src="/uploads/Logo-Storm-Branco-PSD.png" loading="lazy" class="logo"></a>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+    <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+    <a href="/">Home</a>
+    <a href="/category">Categorias</a>
+    <a href="/about">Sobre nós</a>
+    <a href="/contact">Contato</a>
+    <label for="chk" class="hide-menu-btn">
+      <i class="fas fa-times"></i>
+    </ul>
+  </div>
+
+  <div class="title-posts">
+    <h1 class="h1-title line line-about"> Sobre Nós </h1>
+</div>
+
+<h5 class="h5-about">
+    Somos um grupo independente, e, com a ideia de unir vários assuntos em apenas um lugar, fizemos este site. Desenvolvido pela equipe de Desenvolvimento da TYROS, o Blog Storm conta com os mais variados temas, tendo um pequeno humor presente e sempre possuindo um conteúdo verídico.
+</h5>
+<br>
+<br>
+<hr>
+<br>
+    <div class="title-posts">
+        <h1 class="h1-title line line-about"> Faça uma Doação </h1>
+    </div>
+    <h5 class="h5-about">
+        Todo nosso conteúdo é, e sempre será totalmente gratuito. Porém, nós dependemos de anúncios pra conseguir bancar toda despesa com a hospedagem do site.
+        Caso tenha interesse, poderá doar qualquer tipo de quantia pelo PayPal. Toda ajuda será muito bem-vinda e iremos agradecer com sua contribuição :)
+    </h5>
+    <br>
+    <br>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" >
+        <input type="hidden" name="cmd" value="_donations" />
+        <input type="hidden" name="business" value="hitallomoreira13@gmail.com" />
+        <input type="hidden" name="item_name" value="Ajude-nos a crescer mais" />
+        <input type="hidden" name="currency_code" value="BRL" />
+        <button class="btn-footer" name="submit" type="submit">
+          <i class="icon-paypal"></i>&nbsp; Doar pelo PayPal
+        </button>
+    </form>   
+<br>
+<br>
+<hr>
+<br>
+    <div class="title-posts">
+        <h1 class="h1-title line line-about"> Redes Sociais </h1>
+    </div>
+    <h5 class="h5-about">
+      Siga-nos nas Redes Sociais ou mande uma mensagem para o nosso Whatsapp
+    </h5>
+    <div class="center-social">
+      <a target="_blank" href="https://www.facebook.com/blogstorm"><span class="fab fa-facebook-f"></span></a>
+      <a target="_blank" href="https://www.instagram.com/_blog_storm/"><span class="fab fa-instagram"></span></a>
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=5511987116930&text=Eai%20meu%20querido%2C%20como%20est%C3%A1%3F"><span class="fab fa-whatsapp"></span></a>
+    </div>
+
+<%- include("partials/footer.ejs")%>

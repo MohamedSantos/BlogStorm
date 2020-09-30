@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta charset="viewport" content="width- device-width, inital-scale= 1.0">
+    <meta name="description" content="Fique por dentro de tudo o que acontece e tudo o que já aconteceu, com uma pitada de humor e verdade">
+
+    <title>Blog Storm - Fique por dentro de tudo (ou quase)</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177365414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177365414-1');
+</script>
+
+
+    <link rel="shortcut icon" href="/css/images/favicon.ico" >
+    
+  <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/share.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body class="center">
+      
+  <div class="header">
+    <a href="/"><img src="/uploads/Logo-Storm-Branco-PSD.png" alt="Logo Storm Blog" loading="lazy" class="logo"></a>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+    <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+    <a href="/">Home</a>
+    <a href="/category">Categorias</a>
+    <a href="/about">Sobre nós</a>
+    <a href="/contact">Contato</a>
+    <label for="chk" class="hide-menu-btn">
+      <i class="fas fa-times"></i>
+    </ul>
+  </div>
+<div class="maxhidth center">
+
+<div class="title-posts">
+    <h1 class="h1-title line"> Últimos Posts </h1>
+</div>
+
+
+        <div id="containerPosts">
+        <% articles.forEach(article=>{%>
+            <div class="each-post">
+            
+                <!-- IMAGEM -->
+                <a href="/<%=article.slug%>"><img loading="lazy" alt="<%=article.title%>" src="/uploads/<%=article.img%>" id="image"></a>
+                        
+                <!-- CATEGORIA -->
+
+                <%if(article.category.title == "Atualidades"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #18f848">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <%if(article.category.title == "Curiosidades"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #fd9800">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <%if(article.category.title == "Educação"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #048af7">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <%if(article.category.title == "Esportes"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #7d05ec">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <% if(article.category.title == "Saúde"){%>
+                <a href="/category/<%= article.category.slug%>" id="category" style="color: #ee0b0b">
+                    <strong> <%= article.category.title %> </strong>
+                </a>
+                <%}%>
+
+                <%if(article.category.title == "Tecnologia"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #135502">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+                
+                <%if(article.category.title == "Mundo Geek"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #2610ec">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <%if(article.category.title == "Mundo Feminino"){%>
+                    <a href="/category/<%= article.category.slug%>" id="category" style="color: #df14b3">
+                        <strong> <%= article.category.title %> </strong>
+                    </a>
+                <%}%>
+
+                <!-- TITULO -->
+                <a href="/<%=article.slug%>" id="color-red-dark">
+                    <h2 style="font-weight: 700;margin-top:10px;">
+                    <%= article.title %>
+                    </h2>
+                    <!-- SUBTITULO -->
+                    <div id="sub">
+                    <%= article.subtitle %>
+                    </div>
+                </a>
+            </div>
+        <%})%>
+        </div>
+        <% if(articles.count >= 17){%>
+        <div class="row">
+            <div class="col col-12">
+                <a style="float: right" href="/page/2">Próxima página ></a>
+            </div>
+            <hr>
+        </div>
+        <%}%> 
+
+    </div>
+
+<%- include('partials/footer.ejs')%>

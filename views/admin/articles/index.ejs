@@ -1,0 +1,55 @@
+<%- include ('../../partials/headerAdm.ejs')%>
+
+<div class="container maxhidth">
+    <br>
+    <h2>Artigos</h2>
+    <br>
+    <a href="/admin/articles/new"><button class="btn btn-new">Criar novo artigo</button></a>
+    <hr>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título do artigo</th>
+                <th>Subtítulo</th>
+                <th>Categoria</th>
+                <th>Autor(a)</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+           <% articles.forEach(article => {%>
+            <tr>
+                <th><%= article.id%></th> 
+                <th><%= article.title%></th> 
+                <th><%= article.subtitle%></th> 
+                <th><%= article.category.title%></th> 
+                <th><%= article.nameAuthor%></th>
+                <th>
+                    <a href="/admin/articles/article/<%= article.slug%>"><button class="btn btn-view">Visualizar</button></a>
+                    
+                    <form method="POST" action="/articles/delete" style="display:inline;" onsubmit="confDelete(event, this)">
+                        <input type="hidden" name="id" value="<%= article.id%>">
+                        <button class="btn btn-delete">Excluir</button>
+                    </form>
+                    <a href="/admin/articles/edit/<%= article.id%>"><button class="btn btn-edit">Editar</button></a>
+
+                    
+                </th>
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+<script>
+    function confDelete(event, form){
+        event.preventDefault();
+        var decision= confirm("Você realmente quer deletar este artigo?")
+        if(decision == true){
+            form.submit();
+        }
+    }
+</script>
+
+</html>

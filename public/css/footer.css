@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+footer{
+    position: relative;
+    margin-top: 10em;
+    margin-bottom: 0;
+    width: 100%;
+    background: black;  
+}
+
+.main-content{
+    display: flex;
+}
+
+.main-content .box{ 
+    flex-basis: 50%;
+    padding: 40px 50px;
+}
+
+.box h2{
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+}
+
+.box .content-2{
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.box .content-2:before{
+    position: absolute;
+    content: '';
+    top: -10px;
+    height: 2px;
+    width: 100%;
+    background: #1a1a1a;
+}
+
+.box .content-2:after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 15%;
+    background: #992cb8;
+    top: -10px;
+}
+
+
+.box .p-2, span, .text{
+    color: white;
+    font-weight: normal;
+}
+
+.icon-paypal{
+    content: url(./images/paypal.svg);
+    margin-block-start: 0.4em;
+    margin-block-end: -0.3em;
+    margin-inline-end: 0.3em;
+    max-width: 20px;
+}
+
+
+.left .content-2 .p-2{
+    text-align: justify;
+}
+
+.left .content-2 .social{
+    margin: 20px 0 0 0;
+}
+
+.left .content-2 .social a{
+    padding: 0 2px;
+    color: white;
+}
+
+
+.left .content-2 .social a span{
+    height: 40px;
+    width: 40px;
+    background: #1a1a1a;
+    line-height: 40px;
+    text-align: center;
+    font-size: 38px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.left .content-2 .social a span:hover{
+    background: #631D76;
+}
+
+
+.center .content-2 .fas{
+    font-size: 1.4375rem;
+    background: #1a1a1a;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+.center .content-2 .fas:hover{
+    background: #631D76;
+}
+
+.center .content-2 .text{
+    font-size: 1.0625rem;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.center .content-2 .phone{
+    margin: 10px 0;
+}
+
+.right form .text{
+    font-size: 1.0625rem;
+    margin-bottom: 2px;
+    color: #656565;
+}
+
+.right form .msg{
+    margin: 10px;
+}
+
+.right form input, .right form textarea{
+    resize: none;
+    color: white;
+    width: 100%;
+    font-size: 1.0625rem;
+    background: #151515;
+    padding-left: 10px;
+    border: none;
+} 
+
+.right form input:focus,
+.right form textarea:focus{
+    outline-color: #3498db;
+}
+
+.right form input{
+    height: 35px;
+}
+
+.right form .btn-footer{
+    margin-top: 10px;
+}
+
+.btn-footer:hover{
+    background-color: #3498db;
+}
+
+.btn-footer{
+    height:60px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background: #9f2ebe;
+    border-radius: 4em;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.right form .btn-footer button{
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background: #9f2ebe;
+    border-radius: 10px;
+    font-size: 1.0625rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: .3s;
+}
+
+
+
+
+.right form .btn button:hover{
+   background: #631D76;
+}
+
+.bottom .center{
+    padding: 5px;
+    font-size: 0.9375rem;
+    background: #151515;
+}
+
+.bottom center span{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.bottom center a{
+    color: #f12020;
+    text-decoration: nones;
+}
+
+.bottom center a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-device-width: 900px){
+    footer{
+        position: relative;
+        bottom: 0;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
+    .left .content-2 .social a span{
+        height: 150px;
+        width: 150px;
+        line-height: 150px;
+    }
+    .btn-footer{
+        height: 120px;
+        font-size: 1.87rem;
+    }
+    .icon-paypal{
+        max-width: 43px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    footer{
+        position: relative;
+        bottom: 0;
+    }
+    .main-content{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-content .box{
+        margin: 5px 0;
+    }
+    .left .content-2 .social a span{
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+    }
+}
+.main-content .center .box {
+    height: 10px;
+}

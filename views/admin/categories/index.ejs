@@ -1,0 +1,50 @@
+<%- include ('../../partials/headerAdm.ejs')%>
+
+<div class="container maxhidth">
+    <br>
+    <h2>Categorias</h2>
+    <br>
+    <a class="btn btn-new" href="/admin/categories/new">Criar nova categoria</a>
+    <hr>
+    <br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Título da categoria</th>
+                <th>Slug</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% categories.forEach(category =>{%>
+                <tr>
+                    <th><%= category.id%></th>
+                    <th><%= category.title%></th>
+                    <th><%= category.slug%></th>
+                    <th>
+                        <a href="/admin/categories/edit/<%= category.id%>"><button class="btn btn-edit">Editar</button></a>
+
+                        <form method="POST" action="/categories/delete" style="display:inline;" onsubmit="confDelete(event, this)">
+                            <input type="hidden" name="id" value="<%= category.id%>">
+                            <button class="btn btn-delete">Excluir</button>
+                        </form>
+                    </th>
+                </tr>
+            <% })%>
+
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function confDelete(event, form){
+        event.preventDefault();
+        var decision= confirm("Você realmente quer deletar esta categoria?")
+        if(decision == true){
+            form.submit();
+        }
+    }
+</script>
+
+</html>

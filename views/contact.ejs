@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br"><head>
+    <meta charset="utf-8">
+    <meta charset="viewport" content="width- device-width, inital-scale= 1.0">
+    <meta name="description" content="Entre em contato conosco">
+
+    <title>CONTATO - Blog Storm</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177365414-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177365414-1');
+</script>
+
+
+    <link rel="shortcut icon" href="/css/images/favicon.ico" >
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="/css/new.css">
+  <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/share.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body class="center">
+
+  <div class="header">
+    <a href="/"><img src="/uploads/Logo-Storm-Branco-PSD.png" loading="lazy" class="logo"></a>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-menu-btn">
+    <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+    <a href="/">Home</a>
+    <a href="/category">Categorias</a>
+    <a href="/about">Sobre nós</a>
+    <a href="/contact">Contato</a>
+    <label for="chk" class="hide-menu-btn">
+      <i class="fas fa-times"></i>
+    </ul>
+  </div>
+  <div class="maxhidth center">
+        <div class="contact-section">
+            <div class="title-posts">
+                <h1 class="h1-title line line-about"> Contato </h1>
+            </div>
+            <h5 class="h5-about">Possui alguma sugestão ou gostaria de fazer alguma parceria? Deixe sua mensagem, iremos retornar o mais rápido possível</h5>
+            <br>
+            <br>
+            <hr>
+            <br>
+
+            <form class="contact-form" action="/sendEmail" method="POST">
+                <input name="nPerson" type="text" class="contact-form-text" placeholder="Seu nome" required>
+                <input name="nEmail" type="email" class="contact-form-text" placeholder="Seu Email" required>
+                <input name="nTel" type="text" class="contact-form-text telefone" placeholder="Seu telefone" required>
+                <textarea name="nMessage" class="contact-form-text" placeholder="Escreva sua mensagem" required></textarea>
+                <input type="submit" class="contact-form-btn" value="Enviar">
+            </form>
+        </div>
+        </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+<script>
+    jQuery("input.telefone")
+        .mask("(99) 9999-9999?9")
+        .focusout(function (event) {  
+            var target, phone, element;  
+            target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+            phone = target.value.replace(/\D/g, '');
+            element = $(target);  
+            element.unmask();  
+            if(phone.length > 10) {  
+                element.mask("(99) 99999-999?9");  
+            } else {  
+                element.mask("(99) 9999-9999?9");  
+            }  
+        });
+</script>
+<%- include('partials/footer.ejs')%>
