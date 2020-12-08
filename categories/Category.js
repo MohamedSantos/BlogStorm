@@ -11,4 +11,6 @@ const Category = connection.define('categories',{
      }
 })
 
+Category.sync({force:false}).then(()=>{});
+
 module.exports = Category;

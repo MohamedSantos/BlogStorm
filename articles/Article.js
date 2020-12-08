@@ -27,8 +27,10 @@ const Article = connection.define('articles',{
         allowNull: false
     }
 })
-
 Category.hasMany(Article); //Uma para muitos
 Article.belongsTo(Category); //Uma para uma
+
+Article.sync({force:true}).then(()=>{});
+
 
 module.exports = Article;
